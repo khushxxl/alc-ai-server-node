@@ -49,7 +49,10 @@ app.post("/analyze-image", async (req, res) => {
             {
               type: "text",
               text: `What's in this image? - Explain to me about this alcoholic beverage and return as a json object start with
-              
+   if you dont find any "Alcoholic Beverage" in the image, return an erroe as - {
+   "error": "No Alcoholic Beverage found in the image"
+   }
+   if you find any "Alcoholic Beverage" in the image, return the json object as - {
  {
     "type": "Whiskey",
     "category": "Single Malt",
